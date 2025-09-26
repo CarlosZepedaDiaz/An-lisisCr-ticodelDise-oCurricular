@@ -48,6 +48,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -55,6 +57,10 @@ body {
   line-height: 1.6;
   color: var(--ucen-gris-oscuro);
   background-color: var(--ucen-blanco);
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* ===== CONTENEDOR PRINCIPAL ===== */
@@ -62,6 +68,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-md);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* ===== HEADER - NAVEGACIÓN BLANCA ===== */
@@ -74,12 +82,17 @@ body {
   right: 0;
   z-index: 1000;
   padding: 8px 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .header-content {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .logo-section {
@@ -118,6 +131,10 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .main-nav a {
@@ -574,6 +591,42 @@ body {
 
 .referencia-link:hover {
   text-decoration: underline;
+}
+
+/* ===== DESKTOP STYLES ===== */
+@media (min-width: 769px) {
+  .main-nav {
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    box-shadow: none;
+    padding-top: 0;
+  }
+  
+  .main-nav ul {
+    flex-direction: row;
+    gap: 16px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .main-nav li {
+    width: auto;
+  }
+  
+  .main-nav a {
+    display: inline-block;
+    padding: 6px 12px;
+    border-bottom: none;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .mobile-menu-toggle {
+    display: none !important;
+  }
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
