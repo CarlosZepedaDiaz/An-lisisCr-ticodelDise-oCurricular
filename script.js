@@ -2,10 +2,43 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ===== NAVEGACIÓN SUAVE =====
-    const navLinks = document.querySelectorAll('a[href^="#"]');
-    
+    // ===== MENÚ MÓVIL =====
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    const mobileOverlay = document.querySelector('.mobile-overlay');
+    const navLinks = document.querySelectorAll('.main-nav a');
+
+    function toggleMobileMenu() {
+        mobileToggle.classList.toggle('active');
+        mainNav.classList.toggle('active');
+        mobileOverlay.classList.toggle('active');
+        document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+    }
+
+    function closeMobileMenu() {
+        mobileToggle.classList.remove('active');
+        mainNav.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', toggleMobileMenu);
+    }
+
+    if (mobileOverlay) {
+        mobileOverlay.addEventListener('click', closeMobileMenu);
+    }
+
+    // Cerrar menú al hacer clic en un enlace
     navLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    // ===== NAVEGACIÓN SUAVE =====
+    const allNavLinks = document.querySelectorAll('a[href^="#"]');
+    
+    allNavLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             
@@ -29,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ===== NAVEGACIÓN ACTIVA AL HACER SCROLL =====
     function updateActiveNavigation(activeId) {
-        navLinks.forEach(link => {
+        allNavLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === activeId) {
                 link.classList.add('active');

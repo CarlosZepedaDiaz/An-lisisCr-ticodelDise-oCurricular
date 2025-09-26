@@ -135,6 +135,38 @@ body {
   color: var(--ucen-azul-secundario);
 }
 
+/* ===== MOBILE MENU ===== */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  gap: 4px;
+  z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--ucen-azul-principal);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
 /* ===== HERO SECTION ===== */
 .hero {
   background: linear-gradient(135deg, var(--ucen-azul-principal) 0%, var(--ucen-azul-secundario) 100%);
@@ -553,6 +585,73 @@ body {
   .header-content {
     flex-direction: column;
     gap: 6px;
+    position: relative;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100vh;
+    background: var(--ucen-blanco);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding-top: 80px;
+  }
+
+  .main-nav.active {
+    left: 0;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: var(--spacing-md);
+    align-items: stretch;
+  }
+
+  .main-nav li {
+    width: 100%;
+  }
+
+  .main-nav a {
+    display: block;
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--ucen-gris-claro);
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .main-nav a:hover {
+    background-color: var(--ucen-azul-claro);
+  }
+
+  .mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-overlay.active {
+    opacity: 1;
+    visibility: visible;
   }
   
   .logo-section {
@@ -601,8 +700,26 @@ body {
   
   .proyecto-grid,
   .equipo-grid,
-  .universidades-grid {
+  .universidades-grid,
+  .metodologia-grid,
+  .analisis-grid,
+  .resultados-grid,
+  .fuentes-grid,
+  .referencias-grid {
     grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  /* Grids específicos con ajustes */
+  .criterios-grid,
+  .protocolo-grid,
+  .bd-estructura,
+  .evidencias-grid,
+  .proceso-grid,
+  .limitaciones-grid,
+  .rigor-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
   }
   
   .miembro-photo {
@@ -628,6 +745,24 @@ body {
     padding: var(--spacing-sm);
     font-size: 0.9rem;
   }
+
+  /* Mejoras para tarjetas y elementos */
+  .proyecto-item,
+  .equipo-item,
+  .universidad-item,
+  .metodologia-item,
+  .analisis-item {
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -644,12 +779,110 @@ body {
   }
   
   .btn-primary, .btn-secondary {
-    padding: var(--spacing-sm) var(--spacing-lg);
-    font-size: 0.9rem;
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 1rem;
+    min-height: 44px;
+    min-width: 120px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+  }
+
+  /* Elementos interactivos optimizados para touch */
+  .main-nav a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    touch-action: manipulation;
+  }
+
+  .mobile-menu-toggle {
+    min-height: 44px;
+    min-width: 44px;
+    touch-action: manipulation;
   }
   
   .section, .proyecto, .equipo, .analisis, .universidades, .resultados, .fuentes {
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-md) 0;
+  }
+
+  .container {
+    padding: 0 var(--spacing-xs);
+  }
+
+  /* Mejoras para todos los grids en móviles */
+  .proyecto-grid,
+  .equipo-grid,
+  .universidades-grid,
+  .metodologia-grid,
+  .analisis-grid,
+  .resultados-grid,
+  .fuentes-grid,
+  .referencias-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xs);
+  }
+
+  /* Tarjetas y elementos más compactos */
+  .proyecto-item,
+  .equipo-item,
+  .universidad-item,
+  .metodologia-item,
+  .analisis-item {
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  /* Tipografía optimizada para móviles */
+  .section-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  /* Mejoras para elementos interactivos */
+  .proyecto-item,
+  .equipo-item,
+  .universidad-item {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .proyecto-item:hover,
+  .equipo-item:hover,
+  .universidad-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Mejoras para formularios y inputs si existen */
+  input, textarea, select {
+    min-height: 44px;
+    padding: var(--spacing-sm);
+    font-size: 1rem;
+    touch-action: manipulation;
+  }
+
+  /* Espaciado mejorado para listas */
+  ul, ol {
+    padding-left: var(--spacing-md);
+  }
+
+  li {
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.5;
   }
   
   .categoria-referencias {
