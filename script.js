@@ -2,38 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ===== MENÚ MÓVIL =====
-    const mobileToggle = document.querySelector('.mobile-menu-toggle');
-    const mainNav = document.querySelector('.main-nav');
-    const mobileOverlay = document.querySelector('.mobile-overlay');
-    const navLinks = document.querySelectorAll('.main-nav a');
 
-    function toggleMobileMenu() {
-        mobileToggle.classList.toggle('active');
-        mainNav.classList.toggle('active');
-        mobileOverlay.classList.toggle('active');
-        document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
-    }
-
-    function closeMobileMenu() {
-        mobileToggle.classList.remove('active');
-        mainNav.classList.remove('active');
-        mobileOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', toggleMobileMenu);
-    }
-
-    if (mobileOverlay) {
-        mobileOverlay.addEventListener('click', closeMobileMenu);
-    }
-
-    // Cerrar menú al hacer clic en un enlace
-    navLinks.forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
-    });
 
     // ===== NAVEGACIÓN SUAVE =====
     const allNavLinks = document.querySelectorAll('a[href^="#"]');
@@ -182,46 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== NAVEGACIÓN MÓVIL =====
-    function initMobileMenu() {
-        const nav = document.querySelector('.main-nav');
-        const navList = nav.querySelector('ul');
-        const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
-        
-        if (!mobileMenuBtn) return;
-        
-        // Toggle del menú móvil
-        mobileMenuBtn.addEventListener('click', function() {
-            nav.classList.toggle('active');
-            const overlay = document.querySelector('.mobile-overlay');
-            if (overlay) {
-                overlay.classList.toggle('active');
-            }
-        });
-        
-        // Cerrar menú al hacer clic en un enlace
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                nav.classList.remove('active');
-                const overlay = document.querySelector('.mobile-overlay');
-                if (overlay) {
-                    overlay.classList.remove('active');
-                }
-            });
-        });
-        
-        // Cerrar menú al hacer clic en el overlay
-        const overlay = document.querySelector('.mobile-overlay');
-        if (overlay) {
-            overlay.addEventListener('click', function() {
-                nav.classList.remove('active');
-                this.classList.remove('active');
-            });
-        }
-    }
-    
-    // Inicializar menú móvil
-    initMobileMenu();
+
     
     // ===== LOADING ANIMATION =====
     window.addEventListener('load', function() {

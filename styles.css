@@ -72,19 +72,22 @@ body {
   box-sizing: border-box;
 }
 
-/* ===== HEADER - NAVEGACIÓN BLANCA ===== */
+/* ===== HEADER - NAVEGACIÓN SUTIL ===== */
 .header {
-  background-color: var(--ucen-blanco);
-  box-shadow: var(--shadow-md);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 8px 0;
+  padding: 6px 0;
   width: 100%;
   box-sizing: border-box;
   overflow-x: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
 .header-content {
@@ -99,97 +102,72 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  background-color: var(--ucen-blanco);
-  padding: 12px;
-  border-radius: var(--border-radius);
-  margin-bottom: 4px;
+  gap: 10px;
+  background-color: transparent;
+  padding: 8px 12px;
+  margin-bottom: 2px;
 }
 
 .logo {
-  height: 45px;
+  height: 35px;
   width: auto;
+  opacity: 0.9;
 }
 
 .institution-info h1 {
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--ucen-azul-principal);
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.1rem;
+  opacity: 0.9;
 }
 
 .institution-info p {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--ucen-gris-medio);
   font-weight: 400;
+  opacity: 0.8;
 }
 
 .main-nav ul {
   display: flex;
   list-style: none;
-  gap: 16px;
+  gap: 12px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 4px 0;
 }
 
 .main-nav a {
   text-decoration: none;
-  color: var(--ucen-azul-principal);
+  color: #4d7399;
   font-weight: 500;
-  font-size: 0.9rem;
-  padding: 6px 12px;
-  border-radius: var(--border-radius);
-  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  position: relative;
 }
 
 .main-nav a:hover {
-  background-color: var(--ucen-azul-claro);
-  color: var(--ucen-azul-secundario);
+  color: var(--ucen-azul-principal);
+  background-color: rgba(230, 242, 255, 0.6);
+  transform: translateY(-1px);
 }
 
-/* ===== MOBILE MENU ===== */
-.mobile-menu-toggle {
-  display: none;
-  flex-direction: column;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  gap: 4px;
-  z-index: 1001;
-}
 
-.mobile-menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background-color: var(--ucen-azul-principal);
-  transition: all 0.3s ease;
-  border-radius: 2px;
-}
-
-.mobile-menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
-}
-
-.mobile-menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.mobile-menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
 
 /* ===== HERO SECTION ===== */
 .hero {
   background: linear-gradient(135deg, var(--ucen-azul-principal) 0%, var(--ucen-azul-secundario) 100%);
   color: var(--ucen-blanco);
-  padding: calc(60px + var(--spacing-xxl)) 0 var(--spacing-xxl) 0;
+  padding: calc(80px + var(--spacing-lg)) 0 var(--spacing-xxl) 0;
   text-align: center;
+  margin-top: -1px;
 }
 
 .hero-content h1 {
@@ -624,9 +602,7 @@ body {
     text-align: center;
   }
   
-  .mobile-menu-toggle {
-    display: none !important;
-  }
+
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -635,58 +611,63 @@ body {
     padding: 0 var(--spacing-sm);
   }
   
+  .header {
+    padding: 8px 0;
+  }
+
   .header-content {
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
     position: relative;
+    align-items: center;
   }
 
-  .mobile-menu-toggle {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+  .logo-section {
+    padding: 6px 8px;
+    margin-bottom: 0;
   }
 
-  .main-nav {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 280px;
-    height: 100vh;
-    background: var(--ucen-blanco);
-    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-    transition: left 0.3s ease;
-    z-index: 1000;
-    padding-top: 80px;
+  .logo {
+    height: 30px;
   }
 
-  .main-nav.active {
-    left: 0;
+  .institution-info h1 {
+    font-size: 0.9rem;
+  }
+
+  .institution-info p {
+    font-size: 0.7rem;
   }
 
   .main-nav ul {
-    flex-direction: column;
-    gap: 0;
-    padding: var(--spacing-md);
-    align-items: stretch;
-  }
-
-  .main-nav li {
-    width: 100%;
+    flex-direction: row;
+    gap: 6px;
+    padding: 8px 12px;
+    margin: 0;
+    align-items: center;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .main-nav a {
     display: block;
-    padding: var(--spacing-md);
-    border-bottom: 1px solid var(--ucen-gris-claro);
-    font-size: 1rem;
-    text-align: left;
+    padding: 6px 8px;
+    color: #4d7399;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-align: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
   }
 
   .main-nav a:hover {
-    background-color: var(--ucen-azul-claro);
+    background-color: rgba(230, 242, 255, 0.6);
+    color: var(--ucen-azul-principal);
+    transform: translateY(-1px);
   }
 
   .mobile-overlay {
@@ -819,6 +800,37 @@ body {
 }
 
 @media (max-width: 480px) {
+  .header {
+    padding: 6px 0;
+  }
+
+  .logo-section {
+    padding: 4px 6px;
+    gap: 8px;
+  }
+
+  .logo {
+    height: 28px;
+  }
+
+  .institution-info h1 {
+    font-size: 0.85rem;
+  }
+
+  .institution-info p {
+    font-size: 0.65rem;
+  }
+
+  .main-nav ul {
+    gap: 4px;
+    padding: 6px 8px;
+  }
+
+  .main-nav a {
+    padding: 4px 6px;
+    font-size: 0.75rem;
+  }
+
   .hero {
     padding: calc(120px + var(--spacing-lg)) 0 var(--spacing-lg) 0;
   }
@@ -850,11 +862,7 @@ body {
     touch-action: manipulation;
   }
 
-  .mobile-menu-toggle {
-    min-height: 44px;
-    min-width: 44px;
-    touch-action: manipulation;
-  }
+
   
   .section, .proyecto, .equipo, .analisis, .universidades, .resultados, .fuentes {
     padding: var(--spacing-md) 0;

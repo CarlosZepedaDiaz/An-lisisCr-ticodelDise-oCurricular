@@ -7,7 +7,7 @@ Sitio web de investigación académica desarrollado para el **Magíster en Docen
 ## 👥 Equipo Multidisciplinario
 
 - **Víctor Aros** - Arquitecto
-- **Paula Wuster** - Abogada  
+- **Paula Wustner** - Abogada  
 - **William Mitchel** - Licenciado en Historia
 - **Carlos Zepeda** - Ingeniero en Computación
 
@@ -151,4 +151,4 @@ Para consultas sobre este proyecto académico, contactar a través de la Univers
 ---
 
 **© 2024 - Trabajo de Investigación Académica - Universidad Central de Chile**  
-**Autores**: Víctor Aros, Paula Wuster, William Mitchel, Carlos Zepeda
+**Autores**: Víctor Aros, Paula Wustner, William Mitchel, Carlos Zepeda
