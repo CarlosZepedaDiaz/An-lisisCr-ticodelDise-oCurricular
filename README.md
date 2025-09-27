@@ -11,7 +11,7 @@ Sitio web de investigación académica desarrollado para el **Magíster en Docen
 - **William Mitchell** - Licenciado en Historia
 - **Carlos Zepeda** - Ingeniero en Computación
 
-## 🎯 Objetivos
+## Objetivos
 
 ### Objetivo General
 Realizar un análisis crítico comparativo del diseño curricular de la carrera Ingeniería Civil Industrial en tres instituciones de educación superior con características distintivas.

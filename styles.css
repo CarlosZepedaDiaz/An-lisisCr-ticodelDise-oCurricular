@@ -1675,7 +1675,7 @@ body {
 }
 
 .verificacion-item h4::before {
-  content: "🎯";
+  content: "";
   font-size: 1.1em;
 }
 
@@ -2224,7 +2224,7 @@ body {
 }
 
 .implementacion-categoria h5::before {
-  content: "🎯";
+  content: "";
   font-size: 1em;
 }
 
@@ -4142,7 +4142,7 @@ body {
 }
 
 .normativa-card:nth-child(3) h4::before {
-    content: '🎯';
+    content: '';
     background: linear-gradient(135deg, #7c3aed, #8b5cf6);
 }
 
@@ -6039,5 +6039,58 @@ body {
     width: 40px;
     height: 40px;
     font-size: 1rem;
+  }
+}
+
+/* Estilos para el contenido detallado de verificación cruzada */
+.verificacion-content {
+  margin-top: var(--spacing-md);
+}
+
+.verificacion-content h5 {
+  color: var(--ucen-azul-principal);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: var(--spacing-md) 0 var(--spacing-sm) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.verificacion-content h5 i {
+  color: var(--ucen-dorado);
+  font-size: 0.9rem;
+}
+
+.verificacion-content p {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.verificacion-content ul {
+  margin: var(--spacing-sm) 0;
+  padding-left: var(--spacing-md);
+}
+
+.verificacion-content li {
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.verificacion-content li::marker {
+  color: var(--ucen-dorado);
+}
+
+/* Responsive para verificación detallada */
+@media (max-width: 768px) {
+  .verificacion-content h5 {
+    font-size: 0.95rem;
+  }
+  
+  .verificacion-content p,
+  .verificacion-content li {
+    font-size: 0.9rem;
   }
 }
