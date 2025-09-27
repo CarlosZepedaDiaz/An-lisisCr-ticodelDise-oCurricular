@@ -444,6 +444,73 @@ body {
   padding: var(--spacing-lg);
 }
 
+.acreditacion-info {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: var(--border-radius-md);
+  border-left: 4px solid var(--ucen-azul-principal);
+}
+
+.acreditacion-info h4 {
+  color: var(--ucen-azul-principal);
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.acreditacion-info ul {
+  margin-bottom: var(--spacing-sm);
+}
+
+.acreditacion-info li {
+  margin-bottom: var(--spacing-xs);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.sitio-web {
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid #dee2e6;
+  font-size: 0.9rem;
+}
+
+.sitio-web a {
+  color: var(--ucen-azul-principal);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sitio-web a:hover {
+  text-decoration: underline;
+}
+
+.titulos-info, .admision-info {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: var(--border-radius-md);
+  border-left: 4px solid var(--ucen-azul-principal);
+}
+
+.titulos-info h4, .admision-info h4 {
+  color: var(--ucen-azul-principal);
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.titulos-info ul, .admision-info ul {
+  margin-bottom: 0;
+}
+
+.titulos-info li, .admision-info li {
+  margin-bottom: var(--spacing-xs);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
 /* ===== TAGS UNIVERSIDAD ===== */
 .universidad-tag {
   display: inline-block;
