@@ -14,7 +14,7 @@ Para que las fotos de perfil aparezcan correctamente en el sitio web, debes guar
    - Archivo actual: `PW-SinFondo.png`
    - Ruta completa: `assets/PW-SinFondo.png`
 
-3. **William Mitchel (Licenciado en Historia)**
+3. **William Mitchell (Licenciado en Historia)**
    - Nombre del archivo: `william-mitchel.jpg`
    - Ruta completa: `assets/william-mitchel.jpg`
 

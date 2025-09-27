@@ -8,7 +8,7 @@ Sitio web de investigación académica desarrollado para el **Magíster en Docen
 
 - **Víctor Aros** - Arquitecto
 - **Paula Wustner** - Abogada  
-- **William Mitchel** - Licenciado en Historia
+- **William Mitchell** - Licenciado en Historia
 - **Carlos Zepeda** - Ingeniero en Computación
 
 ## 🎯 Objetivos
@@ -151,4 +151,4 @@ Para consultas sobre este proyecto académico, contactar a través de la Univers
 ---
 
 **© 2024 - Trabajo de Investigación Académica - Universidad Central de Chile**  
-**Autores**: Víctor Aros, Paula Wustner, William Mitchel, Carlos Zepeda
+**Autores**: Víctor Aros, Paula Wustner, William Mitchell, Carlos Zepeda
