@@ -5700,8 +5700,8 @@ body {
 .footer-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: var(--spacing-xl);
-  padding: var(--spacing-xl) 0;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg) 0;
   position: relative;
   z-index: 1;
 }
@@ -5709,7 +5709,7 @@ body {
 .footer-section {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
 }
 
 .footer-section h4 {
@@ -5734,8 +5734,8 @@ body {
 .logo-footer {
   display: flex;
   align-items: flex-start;
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-md);
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
 }
 
 .logo-small {
@@ -5816,7 +5816,7 @@ body {
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: var(--spacing-lg) 0;
+  padding: var(--spacing-md) 0;
   position: relative;
   z-index: 1;
 }
@@ -5824,9 +5824,9 @@ body {
 .educational-notice {
   background: rgba(255, 255, 255, 0.1);
   border-left: 4px solid var(--ucen-dorado);
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm);
   border-radius: 0 8px 8px 0;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
   backdrop-filter: blur(10px);
 }
 
@@ -5844,7 +5844,7 @@ body {
 
 .copyright {
   text-align: center;
-  padding-top: var(--spacing-md);
+  padding-top: var(--spacing-sm);
 }
 
 .copyright p {
@@ -6093,4 +6093,1076 @@ body {
   .verificacion-content li {
     font-size: 0.9rem;
   }
+}
+
+/* ===== ESTILOS MEJORADOS PARA NIVEL MACRO Y MESO ===== */
+
+/* Contenedor principal del modelo comparativo */
+.modelo-comparativo {
+  display: grid;
+  gap: var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+}
+
+/* Estilos para Nivel Macro */
+.nivel-macro {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+  border-left: 5px solid var(--ucen-azul-principal);
+}
+
+.nivel-macro h4 {
+  color: var(--ucen-azul-principal);
+  font-size: 1.8em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background: linear-gradient(135deg, var(--ucen-azul-principal) 0%, var(--ucen-azul-secundario) 100%);
+  color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.nivel-macro h4 i {
+  margin-right: var(--spacing-sm);
+  font-size: 1.1em;
+}
+
+/* Grid de tarjetas macro */
+.macro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+/* Tarjetas macro mejoradas */
+.macro-card {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.macro-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Headers de las tarjetas */
+.card-header {
+  padding: var(--spacing-lg);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card-header h5 {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: var(--ucen-gris-oscuro);
+  margin-top: var(--spacing-sm);
+  margin-bottom: 0;
+}
+
+/* Badges de universidades */
+.universidad-badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: white;
+  margin-bottom: var(--spacing-sm);
+}
+
+.universidad-badge.ucn {
+  background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+}
+
+.universidad-badge.uct {
+  background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+}
+
+.universidad-badge.udec {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Contenido de las tarjetas */
+.card-content {
+  padding: var(--spacing-lg);
+}
+
+/* Aspectos del diseño */
+.design-aspect {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: var(--border-radius);
+  border-left: 3px solid var(--ucen-verde);
+}
+
+.design-aspect:last-child {
+  margin-bottom: 0;
+}
+
+.aspect-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--ucen-verde);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1em;
+}
+
+.aspect-info {
+  flex: 1;
+}
+
+.aspect-label {
+  display: block;
+  font-weight: 700;
+  color: var(--ucen-azul-principal);
+  margin-bottom: var(--spacing-xs);
+  font-size: 1.1em;
+}
+
+.aspect-value {
+  display: block;
+  color: var(--ucen-gris-oscuro);
+  line-height: 1.6;
+}
+
+/* Estilos para Nivel Meso */
+.nivel-meso {
+  background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+  border-left: 5px solid var(--ucen-verde);
+}
+
+.nivel-meso h4 {
+  color: var(--ucen-verde);
+  font-size: 1.8em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background: linear-gradient(135deg, var(--ucen-verde) 0%, #00C851 100%);
+  color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.nivel-meso h4 i {
+  margin-right: var(--spacing-sm);
+  font-size: 1.1em;
+}
+
+/* Grid de categorías meso */
+.meso-grid {
+  display: grid;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+/* Categorías meso */
+.meso-category {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Headers de categorías */
+.category-header {
+  background: linear-gradient(135deg, var(--ucen-verde) 0%, #00C851 100%);
+  color: white;
+  padding: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.category-header i {
+  font-size: 1.3em;
+}
+
+.category-header h5 {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Contenido de categorías */
+.category-content {
+  padding: var(--spacing-lg);
+}
+
+/* Rutas universitarias (Itinerario Formativo) */
+.university-path {
+  margin-bottom: var(--spacing-lg);
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  border-left: 4px solid var(--ucen-azul-secundario);
+}
+
+.university-path:last-child {
+  margin-bottom: 0;
+}
+
+.path-header {
+  margin-bottom: var(--spacing-md);
+}
+
+.path-flow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.flow-step {
+  background: var(--ucen-azul-claro);
+  color: var(--ucen-azul-principal);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+.flow-step.final {
+  background: var(--ucen-verde);
+  color: white;
+}
+
+.path-flow i {
+  color: var(--ucen-gris-medio);
+  font-size: 0.8em;
+}
+
+/* Items de aprendizaje situado e internacionalización */
+.situado-item,
+.internacional-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--ucen-azul-secundario);
+}
+
+.situado-item:last-child,
+.internacional-item:last-child {
+  margin-bottom: 0;
+}
+
+.situado-item p,
+.internacional-item p {
+  margin: 0;
+  color: var(--ucen-gris-oscuro);
+  line-height: 1.6;
+}
+
+/* Responsive Design para Macro y Meso */
+@media (max-width: 768px) {
+  .macro-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .path-flow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+  
+  .path-flow i {
+    transform: rotate(90deg);
+  }
+  
+  .design-aspect {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .aspect-icon {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nivel-macro,
+  .nivel-meso {
+    padding: var(--spacing-lg);
+  }
+  
+  .nivel-macro h4,
+  .nivel-meso h4 {
+    font-size: 1.5em;
+    padding: var(--spacing-md);
+  }
+  
+  .card-content,
+  .category-content {
+    padding: var(--spacing-md);
+  }
+}
+
+/* Base de Datos Sistematizada - Universidad Cards */
+.universidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.universidad-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.universidad-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.universidad-card .card-header {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.universidad-card .card-header h4 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.universidad-card .card-content {
+    padding: 1.5rem;
+}
+
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    border-left: 4px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    background: #f1f5f9;
+    border-left-color: #3b82f6;
+    transform: translateX(4px);
+}
+
+.info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.info-icon i {
+    font-size: 1.1rem;
+    color: #64748b;
+}
+
+.info-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+.info-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.info-value {
+    font-size: 0.95rem;
+    color: #1e293b;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* Universidad-specific styling */
+.ucn-card .universidad-badge.ucn {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
+.ucn-card .info-item:hover {
+    border-left-color: #dc2626;
+}
+
+.ucn-card .info-icon {
+    background: linear-gradient(135deg, #fef2f2, #fee2e2);
+}
+
+.ucn-card .info-icon i {
+    color: #dc2626;
+}
+
+.uct-card .universidad-badge.uct {
+    background: linear-gradient(135deg, #059669, #047857);
+}
+
+.uct-card .info-item:hover {
+    border-left-color: #059669;
+}
+
+.uct-card .info-icon {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+}
+
+.uct-card .info-icon i {
+    color: #059669;
+}
+
+.udec-card .universidad-badge.udec {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.udec-card .info-item:hover {
+    border-left-color: #2563eb;
+}
+
+.udec-card .info-icon {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+}
+
+.udec-card .info-icon i {
+    color: #2563eb;
+}
+
+/* Responsive design for universidad cards */
+@media (max-width: 1200px) {
+    .universidades-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .universidades-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .universidad-card .card-header {
+        padding: 1.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .universidad-card .card-content {
+        padding: 1.25rem;
+    }
+    
+    .info-item {
+        padding: 0.875rem;
+        gap: 0.875rem;
+    }
+    
+    .info-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .info-icon i {
+        font-size: 1rem;
+    }
+}
+
+/* ===== SIMILITUDES, DIFERENCIAS E IMPLICANCIAS - DISEÑO MODERNO ===== */
+
+/* Grid principal para las tres tarjetas - Layout vertical */
+.comparacion-moderna-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Tarjetas principales */
+.comparacion-moderna-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.comparacion-moderna-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+/* Headers de las tarjetas */
+.card-header-moderna {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header-moderna::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.card-header-moderna h4 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2c3e50;
+    z-index: 1;
+    position: relative;
+}
+
+/* Iconos de header */
+.header-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    z-index: 1;
+    position: relative;
+}
+
+.similitudes-icon {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+.diferencias-icon {
+    background: linear-gradient(135deg, #e74c3c, #f39c12);
+}
+
+.implicancias-icon {
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+}
+
+/* Badges de las tarjetas */
+.card-badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: auto;
+    z-index: 1;
+    position: relative;
+}
+
+.similitudes-badge {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+}
+
+.diferencias-badge {
+    background: linear-gradient(135deg, #e74c3c, #f39c12);
+    color: white;
+}
+
+.implicancias-badge {
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+    color: white;
+}
+
+/* Colores de fondo para headers */
+.similitudes-card .card-header-moderna::before {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+.diferencias-card .card-header-moderna::before {
+    background: linear-gradient(135deg, #e74c3c, #f39c12);
+}
+
+.implicancias-card .card-header-moderna::before {
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+}
+
+/* Contenido de las tarjetas */
+.card-content-moderna {
+    padding: 1.5rem;
+}
+
+/* Grid de items - Layout horizontal para aprovechar el ancho */
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+/* Items individuales */
+.item-moderna {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.item-moderna:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateX(4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Iconos de items */
+.item-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: white;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+}
+
+/* Contenido de items */
+.item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex: 1;
+}
+
+.item-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #2c3e50;
+    margin-bottom: 0.2rem;
+}
+
+.item-description {
+    font-size: 0.9rem;
+    color: #5a6c7d;
+    line-height: 1.4;
+}
+
+/* Tags mini de universidades */
+.universidad-tag-mini {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+    margin: 0 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.universidad-tag-mini.ucn {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.universidad-tag-mini.uct {
+    background: linear-gradient(135deg, #27ae60, #229954);
+}
+
+.universidad-tag-mini.udec {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+/* Responsive para comparación moderna */
+@media (max-width: 1200px) {
+    .items-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .comparacion-moderna-grid {
+        gap: 1.5rem;
+    }
+    
+    .items-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
+    .card-header-moderna {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+    }
+    
+    .card-badge {
+        margin-left: 0;
+    }
+    
+    .card-content-moderna {
+        padding: 1rem;
+    }
+    
+    .item-moderna {
+        padding: 0.8rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+    }
+    
+    .item-icon {
+        align-self: center;
+    }
+}
+
+/* ===== ESTILOS MODERNOS PARA RESUMEN DE REFERENCIAS ===== */
+
+.resumen-referencias-moderno {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f3f4 100%);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 50px 0;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e3e6ea;
+    position: relative;
+    overflow: hidden;
+}
+
+.resumen-referencias-moderno::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #28a745, #ffc107, #dc3545);
+}
+
+.resumen-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.resumen-header h3 {
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.resumen-header h3 i {
+    color: #007bff;
+    font-size: 1.8rem;
+}
+
+.resumen-subtitle {
+    color: #6c757d;
+    font-size: 1.1rem;
+    font-style: italic;
+    margin: 0;
+}
+
+.stats-grid-moderno {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.stat-card-moderno {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card-moderno::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.stat-card-moderno.total::before {
+    background: linear-gradient(180deg, #007bff, #0056b3);
+}
+
+.stat-card-moderno.institucional::before {
+    background: linear-gradient(180deg, #28a745, #1e7e34);
+}
+
+.stat-card-moderno.teorico::before {
+    background: linear-gradient(180deg, #ffc107, #e0a800);
+}
+
+.stat-card-moderno.normativo::before {
+    background: linear-gradient(180deg, #dc3545, #c82333);
+}
+
+.stat-card-moderno:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card-moderno:hover::before {
+    width: 8px;
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.stat-card-moderno.total .stat-icon {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.stat-card-moderno.institucional .stat-icon {
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+}
+
+.stat-card-moderno.teorico .stat-icon {
+    background: linear-gradient(135deg, #ffc107, #e0a800);
+}
+
+.stat-card-moderno.normativo .stat-icon {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+}
+
+.stat-content {
+    flex: 1;
+}
+
+.stat-numero-grande {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    line-height: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-label-moderno {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #495057;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-descripcion {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.nota-apa-moderna {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 50%, #ffe082 100%);
+    border: 2px solid #ffcc02;
+    border-radius: 16px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nota-apa-moderna::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ffcc02, #ffa000);
+}
+
+.nota-apa-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.nota-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #ff8f00, #ff6f00);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.nota-apa-header h4 {
+    color: #e65100;
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    flex: 1;
+}
+
+.nota-apa-content p {
+    color: #e65100;
+    margin: 0 0 20px 0;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.nota-badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.nota-badges span {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-apa {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+}
+
+.badge-verificable {
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    color: white;
+}
+
+.badge-actualizado {
+    background: linear-gradient(135deg, #6f42c1, #5a32a3);
+    color: white;
+}
+
+/* Responsive para resumen de referencias moderno */
+@media (max-width: 768px) {
+    .resumen-referencias-moderno {
+        padding: 25px;
+        margin: 30px 0;
+    }
+    
+    .resumen-header h3 {
+        font-size: 1.6rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .stats-grid-moderno {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .stat-card-moderno {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .stat-numero-grande {
+        font-size: 2.5rem;
+    }
+    
+    .nota-apa-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .nota-badges {
+        justify-content: center;
+    }
 }

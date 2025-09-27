@@ -150,5 +150,5 @@ Para consultas sobre este proyecto académico, contactar a través de la Univers
 
 ---
 
-**© 2024 - Trabajo de Investigación Académica - Universidad Central de Chile**  
+**© 2025 - Trabajo de Investigación Académica - Universidad Central de Chile**  
 **Autores**: Víctor Aros, Paula Wustner, William Mitchell, Carlos Zepeda
